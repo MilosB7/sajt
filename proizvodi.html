@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>PROIZVODI</title>
+</head>
+
+<body>
+    <header id="header" class="headerp">
+        <ul id="navbar">
+            <li id="logo"><a href="index.html"><img src="assets/logo.png"></a></li>
+            <li class="link notactive"><a href="index.html">Početna</a></li>
+            <li class="link active"><a href="proizvodi.html">Proizvodi</a></li>
+            <li class="link notactive"><a href="onama.html">O nama</a></li>
+            <li class="link notactive"><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </header>
+    <h1 style="text-align: center;">Naši proizvodi</h1>
+    <i id="korpa" class="fa fa-shopping-cart" onmouseover="PrikaziKorpu()"
+        onmouseout="Sakrij(document.getElementById('korpadiv'))">
+        <span id="korpab">0</span>
+    </i>
+    <div id="dodato">
+        <p>Dodato u korpu!</p>
+    </div>
+    <div id="korpadiv" onmouseleave="Sakrij(this)">
+        <p>Ukupna cena: <span id="korpacena">0</span>$</p>
+    </div>
+    <div id="proizvodip">
+
+        <div class="proizvodp p1">
+            <img src="./assets/vratilo.jpg" class="i1">
+            <div id="donjideo">
+                <span id="imep">Vratilo</span>
+                <span id="cenap">99$</span>
+            </div>
+            <button onclick="DodajUKorpu(document.getElementsByClassName('p1').item(0))">DODAJ U KORPU</button>
+        </div>
+        <div class="proizvodp p2">
+            <img src="./assets/bučice.jpg">
+            <div id="donjideo">
+                <span id="imep">Bučice</span>
+                <span id="cenap">40$</span>
+            </div>
+            <button onclick="DodajUKorpu(document.getElementsByClassName('p2').item(0))">DODAJ U KORPU</button>
+        </div>
+        <div class="proizvodp p3">
+            <img src="./assets/ez sipka.jpg">
+            <div id="donjideo">
+                <span id="imep">EZ sipka</span>
+                <span id="cenap">50$</span>
+            </div>
+            <button onclick="DodajUKorpu(document.getElementsByClassName('p3').item(0))">DODAJ U KORPU</button>
+        </div>
+        <div class="proizvodp p4">
+            <img src="./assets/propadanja.jpg">
+            <div id="donjideo">
+                <span id="imep">Razboj za propadanja</span>
+                <span id="cenap">60$</span>
+            </div>
+            <button onclick="DodajUKorpu(document.getElementsByClassName('p4').item(0))">DODAJ U KORPU</button>
+        </div>
+        <div class="proizvodp p5">
+            <img src="./assets/ručke za sklekove.jpg">
+            <div id="donjideo">
+                <span id="imep">Ručke za sklekove</span>
+                <span id="cenap">30$</span>
+            </div>
+            <button onclick="DodajUKorpu(document.getElementsByClassName('p5').item(0))">DODAJ U KORPU</button>
+        </div>
+        <div class="proizvodp p6">
+            <img src="./assets/bench klupa.jpg">
+            <div id="donjideo">
+                <span id="imep">Benč klupa</span>
+                <span id="cenap">120$</span>
+            </div>
+            <button onclick="DodajUKorpu(document.getElementsByClassName('p6').item(0))">DODAJ U KORPU</button>
+        </div>
+        <div class="proizvodp p7">
+            <img src="./assets/noge.jpg">
+            <div id="donjideo">
+                <span id="imep">Sprava za noge</span>
+                <span id="cenap">400$</span>
+            </div>
+            <button onclick="DodajUKorpu(document.getElementsByClassName('p7').item(0))">DODAJ U KORPU</button>
+        </div>
+        <div class="proizvodp p8">
+            <img src="./assets/latmašina.jpg">
+            <div id="donjideo">
+                <span id="imep">Lat mašina</span>
+                <span id="cenap">200$</span>
+            </div>
+            <button onclick="DodajUKorpu(document.getElementsByClassName('p8').item(0))">DODAJ U KORPU</button>
+        </div>
+        <div class="proizvodp p9">
+            <img src="./assets/podesive bučice.jpg">
+            <div id="donjideo">
+                <span id="imep">Podesive bučice</span>
+                <span id="cenap">70$</span>
+            </div>
+            <button onclick="DodajUKorpu(document.getElementsByClassName('p9').item(0))">DODAJ U KORPU</button>
+        </div>
+        <div class="proizvodp p10">
+            <img src="./assets/traka za trcanje.jpg">
+            <div id="donjideo">
+                <span id="imep">Traka za trčanje</span>
+                <span id="cenap">700$</span>
+            </div>
+            <button onclick="DodajUKorpu(document.getElementsByClassName('p10').item(0))">DODAJ U KORPU</button>
+        </div>
+        <div class="proizvodp p11">
+            <img src="./assets/diskovi.jpg">
+            <div id="donjideo">
+                <span id="imep">Diskovi</span>
+                <span id="cenap">20$</span>
+            </div>
+            <button onclick="DodajUKorpu(document.getElementsByClassName('p11').item(0))">DODAJ U KORPU</button>
+        </div>
+        <div class="proizvodp p12">
+            <img src="./assets/multifunkcionalna sprava.jpg">
+            <div id="donjideo">
+                <span id="imep">Multifunkcionalna sprava</span>
+                <span id="cenap">800$</span>
+            </div>
+            <button onclick="DodajUKorpu(document.getElementsByClassName('p12').item(0))">DODAJ U KORPU</button>
+        </div>
+    </div>
+    <footer id="footer">
+        <div id="ikonice">
+            <a href="https://www.facebook.com" target="_blank"><i class="fa fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fa fa-brands fa-instagram"></i></a>
+            <a href="mailto:mail@gmail.com"><i class="fa fa-solid fa-envelope"></i></a>
+            <a href="tel:123456789"><i class="fa fa-solid fa-phone"></i></a>
+        </div>
+        <div id="linkovi">
+            <a href="index.html" class="flink">Početna</a>
+            <a href="proizvodi.html" class="flink">Proizvodi</a>
+            <a href="onama.html" class="flink">O nama</a>
+            <a href="kontakt.html" class="flink">Kontakt</a>
+        </div>
+        <p>©Copyright 2024.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

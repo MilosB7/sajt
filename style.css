@@ -1,0 +1,940 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    background-color: #2E2D2D;
+    color: white;
+}
+
+#top {
+    background-image: url('./assets/Pozadina.png');
+    background-size: cover;
+    border-bottom: 5px solid white;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#navbar {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+#navbar li {
+    padding: 0.5%;
+    position: relative;
+}
+
+#navbar li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#logo img {
+    width: 25%;
+    padding-top: 15px;
+}
+
+#logo img:hover {
+    animation: shake .5s infinite;
+}
+
+.link {
+    margin-top: 15px;
+}
+
+.link:hover {
+    transform: translateY(-5px);
+    transition: all .5s ease-out;
+}
+
+.active::before {
+    content: "";
+    background-color: white !important;
+    width: 90%;
+    height: 2px;
+    position: absolute;
+    top: 60%;
+    left: 5px;
+}
+
+.active:hover::before {
+    animation: linija .5s ease-in;
+}
+
+.notactive::before {
+    content: "";
+    background-color: white !important;
+    width: 90%;
+    height: 2px;
+    position: absolute;
+    top: 60%;
+    left: 5px;
+    opacity: 0;
+}
+
+.notactive:hover::before {
+    opacity: 1;
+    transition: all 0.5s;
+    animation: linija .5s ease-in;
+}
+
+#prvasekcija {
+    width: 100%;
+    height: 550px;
+    color: white;
+    position: relative;
+}
+
+#prvasekcija h1,
+h2,
+h4 {
+    position: absolute;
+}
+
+#naslov {
+    left: 50px;
+    top: 60px;
+    font-size: 60px;
+}
+
+#podnaslov {
+    left: 50px;
+    top: 220px;
+    font-size: 30px;
+}
+
+#podnaslov::before {
+    content: "";
+    background-color: white !important;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 40px;
+    opacity: 1;
+}
+
+#podnaslov:hover::before {
+    opacity: 0.1;
+    transition: all 0.5s;
+}
+
+#prvasekcija h4 {
+    width: 400px;
+    left: 50px;
+    top: 320px;
+    font-size: 20px;
+}
+
+.precrtano {
+    text-decoration: line-through;
+}
+
+#ime {
+    font-style: italic;
+}
+
+#drugasekcija {
+    background-color: #2E2D2D;
+    height: 600px;
+    text-align: center;
+    margin-top: -10px;
+    color: white;
+    border-top: 2px solid rgba(246, 245, 245, 1);
+    position: relative;
+}
+
+#drugasekcija h3 {
+    font-size: 30px;
+    margin-top: 0.5%;
+    width: 100%;
+    text-align: center;
+}
+
+#drugasekcija a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: 3px solid white;
+    width: 10%;
+    margin: auto;
+    background-color: #2E2D2D;
+    padding: 1% 2%;
+    position: absolute;
+    left: 42%;
+    top: 86%;
+    font-size: 120%;
+}
+
+#drugasekcija a:hover {
+    border-radius: 15px;
+    scale: 110%;
+    transition: all 0.4s ease-out;
+}
+
+#proizvodi {
+    width: 90%;
+    margin: auto;
+    margin-top: 6%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: large;
+}
+
+.proizvod:hover {
+    transform: translateY(-10px);
+    scale: 101%;
+    transition: all 0.5s;
+}
+
+.proizvod {
+    width: 20%;
+    margin: 1%;
+    border: 2px solid white;
+    text-align: center;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.proizvod img {
+    width: 100%;
+}
+
+#trecasekcija {
+    background: url('./assets/Pozadina2.png');
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    border-top: 2px solid rgba(246, 245, 245, 1);
+    text-align: right;
+}
+
+#trecasekcija p,
+a {
+    color: white;
+}
+
+#trecasekcija a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: 3px solid white;
+    width: 10%;
+    margin: auto;
+    background-color: #2E2D2D;
+    padding: 1% 2%;
+    position: absolute;
+    top: 70%;
+    left: 80%;
+    font-size: 120%;
+}
+
+#trecasekcija a:hover {
+    border-radius: 15px;
+    scale: 110%;
+    transition: all 0.4s ease-out;
+}
+
+#p1 {
+    display: block;
+    font-size: 30px;
+    margin-right: 5%;
+    padding: 2%;
+}
+
+#p1::before {
+    content: "";
+    background-color: white !important;
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    top: 22%;
+    left: 74%;
+    opacity: 1;
+}
+
+#p2 {
+    font-size: 20px;
+    width: 30%;
+    margin-left: 64%;
+}
+
+footer {
+    border-top: 2px solid rgba(246, 245, 245, 1);
+    color: white;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ikonice {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#ikonice a {
+    padding: 5%;
+}
+
+#ikonice a:hover {
+    scale: 150%;
+    transition: all .5s;
+    animation: shake 1s infinite;
+}
+
+#linkovi {
+    list-style-type: none;
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#linkovi a {
+    display: block;
+    width: 100%;
+    padding: 2%;
+    text-decoration: none;
+}
+
+.flink {
+    position: relative;
+}
+
+.flink::after {
+    content: "";
+    background-color: white !important;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    top: 90%;
+    left: 30%;
+}
+
+.flink:hover::after {
+    width: 40%;
+    transition: all 1s;
+}
+
+/*KRAJ POČETNE STRANICE*/
+.headerp {
+    background-color: #2E2D2D;
+    border-bottom: 2px solid white;
+}
+
+#korpa {
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    z-index: 1;
+    padding: 0.75%;
+    display: block;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: #2E2D2D;
+    scale: 225%;
+}
+
+#korpa::after {
+    color: white;
+    width: 20px;
+    border-radius: 20%;
+    position: absolute;
+}
+
+#korpa:hover {
+    animation: shake 1s infinite;
+    transition: all 1s;
+}
+
+#korpadiv {
+    position: fixed;
+    right: 3%;
+    top: 30%;
+    height: 60%;
+    width: 30%;
+    background-color: #2E2D2D;
+    overflow-y: scroll;
+    border: 2px solid white;
+    display: none;
+}
+
+#korpab {
+    font-size: 7px;
+    font-weight: bold;
+    position: fixed;
+    top: 41%;
+    right: 41%;
+    z-index: 2;
+    color: #2E2D2D;
+    display: block;
+    border-radius: 20%;
+}
+
+#korpadiv p {
+    font-size: x-large;
+    text-align: center;
+}
+
+#proizvodip {
+    width: 90%;
+    margin: auto;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: large;
+    flex-wrap: wrap;
+}
+
+.proizvodp:hover {
+    transform: translateY(-10px);
+    scale: 101%;
+    transition: all 0.5s;
+}
+
+.proizvodp {
+    width: 20%;
+    margin: 1%;
+    border: 2px solid white;
+    text-align: left;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.proizvodp img {
+    width: 100%;
+}
+
+.proizvodp button {
+    color: white;
+    border: 3px solid white;
+    width: 90%;
+    padding: 5%;
+    margin: auto;
+    margin: 10px;
+    background-color: #2E2D2D;
+    float: right;
+}
+
+.proizvodp button:hover {
+    transition: all 0.4s ease-out;
+    border-radius: 15px;
+}
+
+#donjideo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.korpap {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: large;
+}
+
+.korpap img {
+    width: 20%;
+    padding: 2%;
+}
+
+.korpap i {
+    display: block;
+    border-radius: 50%;
+    padding: 2%;
+}
+
+.korpap i:hover {
+    scale: 120%;
+}
+
+#dodato {
+    display: none;
+    position: fixed;
+    top: 45%;
+    left: 35%;
+    z-index: 1;
+    background-color: #2E2D2D;
+    width: 30%;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 2px rgba(225, 225, 225, 0.3);
+}
+
+#dodato p {
+    text-align: center;
+    font-size: large;
+    padding-top: 3%;
+}
+
+/*Kraj prodavnice*/
+#ja {
+    background-image: url('./assets/ja.png');
+    background-size: cover;
+    height: 350px;
+    width: 350px;
+    rotate: 20deg;
+    position: absolute;
+    z-index: 1;
+    left: 10%;
+    top: 10%;
+    opacity: 0;
+}
+
+#ja:hover {
+    opacity: 1;
+    transition: all 2s;
+}
+
+#onamaprvo {
+    height: 500px;
+    background-image: url('./assets/pozadina4.png');
+    border-top: 2px solid white;
+    position: relative;
+    text-align: right;
+}
+
+#onamap1 {
+    display: block;
+    font-size: 40px;
+    margin-top: 2%;
+    margin-right: 5%;
+    padding: 2%;
+    font-weight: bold;
+}
+
+#onamap2 {
+    display: block;
+    font-size: 30px;
+    margin-top: -3%;
+    margin-right: 5%;
+    padding: 2%;
+    font-style: italic;
+}
+
+#onamap2::after {
+    content: "";
+    background-color: white;
+    width: 17%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 76%;
+    opacity: 1;
+}
+
+#onamap2:hover::after {
+    opacity: 0.3;
+    width: 20%;
+    left: 75%;
+    transition: all 0.5s;
+}
+
+#onamap3 {
+    display: block;
+    font-size: 20px;
+    width: 30%;
+    margin-top: -1%;
+    margin-left: 61%;
+    padding: 2%;
+}
+
+#onamadrugo {
+    height: 500px;
+    background-color: #2E2D2D;
+    border-top: 2px solid white;
+    position: relative;
+    text-align: left;
+}
+
+#onamap4 {
+    display: block;
+    font-size: 40px;
+    margin-top: 10%;
+    margin-left: 21%;
+    padding: 2%;
+    font-weight: 600;
+}
+
+#onamap5 {
+    width: 20%;
+    display: block;
+    font-size: 20px;
+    margin-top: -3%;
+    margin-left: 16%;
+    padding: 2%;
+    font-style: italic;
+    text-align: center;
+}
+
+#lokacija {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 25%;
+    top: 15%;
+}
+
+#lokacija:hover {
+    animation: shake 1s infinite;
+    scale: 120%;
+    transition: all 1s;
+}
+
+#mapa {
+    position: absolute;
+    left: 60%;
+    top: 10%;
+    box-shadow: 10px 10px 2px rgba(225, 225, 225, 0.3),
+        15px 15px 1px rgba(225, 225, 225, 0.2),
+        20px 20px 0.5px rgba(225, 225, 225, 0.1);
+    ;
+    border-radius: 10px;
+}
+
+#onamatrece {
+    background-image: url('./assets/pozadina5.png');
+    background-size: cover;
+    height: 500px;
+    border-top: 2px solid white;
+    position: relative;
+}
+
+#onamap6 {
+    display: block;
+    font-size: 30px;
+    margin-top: 7%;
+    margin-right: 5%;
+    padding: 2%;
+    font-weight: bolder;
+}
+
+#onamap6::after {
+    content: "";
+    background-color: white;
+    width: 15%;
+    height: 2px;
+    position: absolute;
+    top: 45%;
+    left: 2%;
+    opacity: 1;
+}
+
+#onamap7 {
+    display: block;
+    font-size: 20px;
+    margin-top: -3%;
+    margin-right: 5%;
+    padding: 2%;
+    width: 25%;
+}
+
+/*Kraj stranice o nama*/
+#kontaktdiv {
+    text-align: center;
+    background-image: url('./assets/pozadina3.png');
+    margin-top: 30px;
+    height: 650px;
+    color: white;
+}
+
+#kontaktforma {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    align-items: center;
+    background-color: rgba(246, 245, 245, 0.1);
+    height: 500px;
+    box-shadow: 10px 10px 2px rgba(225, 225, 225, 0.3),
+        15px 15px 1px rgba(225, 225, 225, 0.2),
+        20px 20px 0.5px rgba(225, 225, 225, 0.1);
+    padding-bottom: 1%;
+}
+
+#kontaktforma .polje {
+    width: 60%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    border: none;
+    font-size: large;
+    margin: 1%;
+    background-color: rgba(246, 245, 245, 1);
+    border: 3px solid #2E2D2D;
+    color: #2E2D2D;
+}
+
+#kontaktforma .polje:focus {
+    border-radius: 20px;
+    transition: all 0.5s;
+    outline: none;
+    border: 3px solid #2E2D2D;
+}
+
+#kontaktforma .polje::placeholder {
+    color: rgba(46, 45, 45, 1);
+}
+
+#dugme {
+    color: #2E2D2D;
+    background-color: white;
+    font-size: large;
+    background-color: white;
+    border: 3px solid #2E2D2D;
+    padding: 2% 7%;
+}
+
+#dugme:hover {
+    background-color: #2E2D2D;
+    color: white;
+    scale: 110%;
+    border-radius: 15px;
+    transition: 0.5s all;
+}
+
+#ostalo {
+    height: 500px;
+    background-image: url('./assets/pozadina6.png');
+    background-size: cover;
+    border-top: 2px solid white;
+    position: relative;
+}
+
+#ostalo h2 {
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+    font-size: xx-large;
+}
+
+#ostalo a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: 3px solid white;
+    width: 10%;
+    margin: auto;
+    background-color: #2E2D2D;
+    padding: 1% 2%;
+    position: absolute;
+}
+
+#ostalo a:hover {
+    border-radius: 15px;
+    scale: 110%;
+    transition: all 0.4s ease-out;
+}
+
+#sup {
+    top: 50%;
+    left: 20%;
+}
+
+#pzt {
+    top: 50%;
+    left: 60%;
+
+}
+
+/*Kraj kontakt stranice*/
+
+@keyframes linija {
+    0% {
+        width: 10%;
+        opacity: 10%;
+    }
+
+    20% {
+        width: 30%;
+        opacity: 20%;
+    }
+
+    40% {
+        width: 50%;
+        opacity: 40%;
+    }
+
+    60% {
+        width: 60%;
+        opacity: 60%;
+    }
+
+    80% {
+        width: 70%;
+        opacity: 80%;
+    }
+
+    90% {
+        width: 70%;
+        opacity: 90%;
+    }
+
+    100% {
+        width: 80%;
+        opacity: 100%;
+    }
+}
+
+@keyframes pojavljivanje {
+    0% {
+        opacity: 10%;
+    }
+
+    20% {
+        opacity: 20%;
+    }
+
+    40% {
+        opacity: 40%;
+    }
+
+    60% {
+        opacity: 60%;
+    }
+
+    80% {
+        opacity: 80%;
+    }
+
+    90% {
+        opacity: 90%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0eg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media(max-width: 1700px) {
+    #onamap2::after {
+        top: 45%;
+    }
+
+    #onamap6::after {
+        top: 40%;
+    }
+
+    #kontaktdiv {
+        height: 600px;
+    }
+
+    #korpab {
+        top: 40%;
+    }
+}
+
+@media(max-width: 1400px) {
+    #drugasekcija a {
+        top: 80%;
+        font-size: 100%;
+    }
+
+    #drugasekcija h3 {
+        margin-top: 2%;
+    }
+
+    #onamap4 {
+        margin-top: 15%;
+    }
+
+    #onamap6::after {
+        top: 35%;
+    }
+
+    #ja {
+        left: 14%;
+    }
+}
+
+@media (max-width: 1100px) {
+    #onamap6::after {
+        top: 30%;
+    }
+
+    #kontaktforma {
+        height: 400px;
+    }
+
+    #ja {
+        left: 16%;
+    }
+}
+
+@media (max-width: 950px) {
+    #navbar {
+        font-size: 16px;
+    }
+
+    #logo img {
+        width: 20%;
+        margin-left: 10%;
+    }
+
+    .active::before {
+        top: 25px;
+    }
+
+    .notactive::before {
+        top: 25px;
+    }
+
+    #drugasekcija a {
+        top: 80%;
+    }
+
+    #drugasekcija h3 {
+        margin-top: 2%;
+    }
+
+    #ja {
+        left: 18%;
+    }
+}
